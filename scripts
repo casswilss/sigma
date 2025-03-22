@@ -1229,36 +1229,6 @@ BenxTarget_Button.TextScaled = true
 BenxTarget_Button.TextSize = 14.000
 BenxTarget_Button.TextWrapped = true
 
-PushTarget_Button.Name = "PushTarget_Button"
-PushTarget_Button.Parent = Target_Section
-PushTarget_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-PushTarget_Button.BackgroundTransparency = 0.500
-PushTarget_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PushTarget_Button.BorderSizePixel = 0
-PushTarget_Button.Position = UDim2.new(0, 25, 0, 400)
-PushTarget_Button.Size = UDim2.new(0, 150, 0, 30)
-PushTarget_Button.Font = Enum.Font.Oswald
-PushTarget_Button.Text = "Push"
-PushTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-PushTarget_Button.TextScaled = true
-PushTarget_Button.TextSize = 14.000
-PushTarget_Button.TextWrapped = true
-
-WhitelistTarget_Button.Name = "WhitelistTarget_Button"
-WhitelistTarget_Button.Parent = Target_Section
-WhitelistTarget_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-WhitelistTarget_Button.BackgroundTransparency = 0.500
-WhitelistTarget_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WhitelistTarget_Button.BorderSizePixel = 0
-WhitelistTarget_Button.Position = UDim2.new(0, 210, 0, 400)
-WhitelistTarget_Button.Size = UDim2.new(0, 150, 0, 30)
-WhitelistTarget_Button.Font = Enum.Font.Oswald
-WhitelistTarget_Button.Text = "Whitelist"
-WhitelistTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-WhitelistTarget_Button.TextScaled = true
-WhitelistTarget_Button.TextSize = 14.000
-WhitelistTarget_Button.TextWrapped = true
-
 TeleportTarget_Button.Name = "TeleportTarget_Button"
 TeleportTarget_Button.Parent = Target_Section
 TeleportTarget_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
