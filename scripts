@@ -264,16 +264,8 @@ local Animations_Section_Button = Instance.new("TextButton")
 local Misc_Section_Button = Instance.new("TextButton")
 local Credits_Section_Button = Instance.new("TextButton")
 local Game_Section = Instance.new("ScrollingFrame")
-local AntiRagdoll_Button = Instance.new("TextButton")
-local PotionFling_Button = Instance.new("TextButton")
-local SpamMines_Button = Instance.new("TextButton")
-local PushAura_Button = Instance.new("TextButton")
-local BreakCannons_Button = Instance.new("TextButton")
-local LethalCannons_Button = Instance.new("TextButton")
-local ChatAlert_Button = Instance.new("TextButton")
-local PotionDi_Button = Instance.new("TextButton")
-local VoidProtection_Button = Instance.new("TextButton")
-local PushAll_Button = Instance.new("TextButton")
+local VC_Unban_Button = Instance.new("TextButton")
+
 local TouchFling_Button = Instance.new("TextButton")
 local CMDBar = Instance.new("TextBox")
 local CannonTP1_Button = Instance.new("TextButton")
@@ -546,95 +538,21 @@ Game_Section.Visible = false
 Game_Section.CanvasSize = UDim2.new(0, 0, 1.85, 0)
 Game_Section.ScrollBarThickness = 5
 
-AntiRagdoll_Button.Name = "AntiRagdoll_Button"
-AntiRagdoll_Button.Parent = Game_Section
-AntiRagdoll_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-AntiRagdoll_Button.BackgroundTransparency = 0.500
-AntiRagdoll_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AntiRagdoll_Button.BorderSizePixel = 0
-AntiRagdoll_Button.Position = UDim2.new(0, 25, 0, 25)
-AntiRagdoll_Button.Size = UDim2.new(0, 150, 0, 30)
-AntiRagdoll_Button.Font = Enum.Font.Oswald
-AntiRagdoll_Button.Text = "Anti ragdoll"
-AntiRagdoll_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-AntiRagdoll_Button.TextScaled = true
-AntiRagdoll_Button.TextSize = 14.000
-AntiRagdoll_Button.TextWrapped = true
+VC_Unban_Button.Name = "VC_Unban_Button"
+VC_Unban_Button.Parent = Game_Section
+VC_Unban_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
+VC_Unban_Button.BackgroundTransparency = 0.500
+VC_Unban_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VC_Unban_Button.BorderSizePixel = 0
+VC_Unban_Button.Position = UDim2.new(0, 25, 0, 25)
+VC_Unban_Button.Size = UDim2.new(0, 150, 0, 30)
+VC_Unban_Button.Font = Enum.Font.Oswald
+VC_Unban_Button.Text = "VC Unban"
+VC_Unban_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+VC_Unban_Button.TextScaled = true
+VC_Unban_Button.TextSize = 14.000
+VC_Unban_Button.TextWrapped = true
 
-PotionFling_Button.Name = "PotionFling_Button"
-PotionFling_Button.Parent = Game_Section
-PotionFling_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-PotionFling_Button.BackgroundTransparency = 0.500
-PotionFling_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PotionFling_Button.BorderSizePixel = 0
-PotionFling_Button.Position = UDim2.new(0, 210, 0, 75)
-PotionFling_Button.Size = UDim2.new(0, 150, 0, 30)
-PotionFling_Button.Font = Enum.Font.Oswald
-PotionFling_Button.Text = "Potion Fling"
-PotionFling_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-PotionFling_Button.TextScaled = true
-PotionFling_Button.TextSize = 14.000
-PotionFling_Button.TextWrapped = true
-
-SpamMines_Button.Name = "SpamMines_Button"
-SpamMines_Button.Parent = Game_Section
-SpamMines_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-SpamMines_Button.BackgroundTransparency = 0.500
-SpamMines_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SpamMines_Button.BorderSizePixel = 0
-SpamMines_Button.Position = UDim2.new(0, 25, 0, 75)
-SpamMines_Button.Size = UDim2.new(0, 150, 0, 30)
-SpamMines_Button.Font = Enum.Font.Oswald
-SpamMines_Button.Text = "Spam mines"
-SpamMines_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-SpamMines_Button.TextScaled = true
-SpamMines_Button.TextSize = 14.000
-SpamMines_Button.TextWrapped = true
-
-PushAura_Button.Name = "PushAura_Button"
-PushAura_Button.Parent = Game_Section
-PushAura_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-PushAura_Button.BackgroundTransparency = 0.500
-PushAura_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PushAura_Button.BorderSizePixel = 0
-PushAura_Button.Position = UDim2.new(0, 210, 0, 25)
-PushAura_Button.Size = UDim2.new(0, 150, 0, 30)
-PushAura_Button.Font = Enum.Font.Oswald
-PushAura_Button.Text = "Push aura"
-PushAura_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-PushAura_Button.TextScaled = true
-PushAura_Button.TextSize = 14.000
-PushAura_Button.TextWrapped = true
-
-BreakCannons_Button.Name = "BreakCannons_Button"
-BreakCannons_Button.Parent = Game_Section
-BreakCannons_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-BreakCannons_Button.BackgroundTransparency = 0.500
-BreakCannons_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BreakCannons_Button.BorderSizePixel = 0
-BreakCannons_Button.Position = UDim2.new(0, 25, 0, 225)
-BreakCannons_Button.Size = UDim2.new(0, 150, 0, 30)
-BreakCannons_Button.Font = Enum.Font.Oswald
-BreakCannons_Button.Text = "Break Cannons"
-BreakCannons_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-BreakCannons_Button.TextScaled = true
-BreakCannons_Button.TextSize = 14.000
-BreakCannons_Button.TextWrapped = true
-
-LethalCannons_Button.Name = "LethalCannons_Button"
-LethalCannons_Button.Parent = Game_Section
-LethalCannons_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-LethalCannons_Button.BackgroundTransparency = 0.500
-LethalCannons_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-LethalCannons_Button.BorderSizePixel = 0
-LethalCannons_Button.Position = UDim2.new(0, 25, 0, 275)
-LethalCannons_Button.Size = UDim2.new(0, 150, 0, 30)
-LethalCannons_Button.Font = Enum.Font.Oswald
-LethalCannons_Button.Text = "Lethal Cannons"
-LethalCannons_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-LethalCannons_Button.TextScaled = true
-LethalCannons_Button.TextSize = 14.000
-LethalCannons_Button.TextWrapped = true
 
 ChatAlert_Button.Name = "ChatAlert_Button"
 ChatAlert_Button.Parent = Game_Section
@@ -651,50 +569,10 @@ ChatAlert_Button.TextScaled = true
 ChatAlert_Button.TextSize = 14.000
 ChatAlert_Button.TextWrapped = true
 
-PotionDi_Button.Name = "PotionDi_Button"
-PotionDi_Button.Parent = Game_Section
-PotionDi_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-PotionDi_Button.BackgroundTransparency = 0.500
-PotionDi_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PotionDi_Button.BorderSizePixel = 0
-PotionDi_Button.Position = UDim2.new(0, 210, 0, 125)
-PotionDi_Button.Size = UDim2.new(0, 150, 0, 30)
-PotionDi_Button.Font = Enum.Font.Oswald
-PotionDi_Button.Text = "Potion dick"
-PotionDi_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-PotionDi_Button.TextScaled = true
-PotionDi_Button.TextSize = 14.000
-PotionDi_Button.TextWrapped = true
 
-VoidProtection_Button.Name = "VoidProtection_Button"
-VoidProtection_Button.Parent = Game_Section
-VoidProtection_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-VoidProtection_Button.BackgroundTransparency = 0.500
-VoidProtection_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-VoidProtection_Button.BorderSizePixel = 0
-VoidProtection_Button.Position = UDim2.new(0, 25, 0, 175)
-VoidProtection_Button.Size = UDim2.new(0, 150, 0, 30)
-VoidProtection_Button.Font = Enum.Font.Oswald
-VoidProtection_Button.Text = "Void protection"
-VoidProtection_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-VoidProtection_Button.TextScaled = true
-VoidProtection_Button.TextSize = 14.000
-VoidProtection_Button.TextWrapped = true
 
-PushAll_Button.Name = "PushAll_Button"
-PushAll_Button.Parent = Game_Section
-PushAll_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-PushAll_Button.BackgroundTransparency = 0.500
-PushAll_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PushAll_Button.BorderSizePixel = 0
-PushAll_Button.Position = UDim2.new(0, 210, 0, 225)
-PushAll_Button.Size = UDim2.new(0, 150, 0, 30)
-PushAll_Button.Font = Enum.Font.Oswald
-PushAll_Button.Text = "Push all"
-PushAll_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-PushAll_Button.TextScaled = true
-PushAll_Button.TextSize = 14.000
-PushAll_Button.TextWrapped = true
+
+
 
 TouchFling_Button.Name = "TouchFling_Button"
 TouchFling_Button.Parent = Game_Section
@@ -711,66 +589,13 @@ TouchFling_Button.TextScaled = true
 TouchFling_Button.TextSize = 14.000
 TouchFling_Button.TextWrapped = true
 
-CMDBar.Name = "CMDBar"
-CMDBar.Parent = Game_Section
-CMDBar.AnchorPoint = Vector2.new(0.5, 0.5)
-CMDBar.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-CMDBar.BackgroundTransparency = 0.300
-CMDBar.BorderColor3 = Color3.fromRGB(228, 8, 10)
-CMDBar.Position = UDim2.new(0.5, 0, 0, 350)
-CMDBar.Size = UDim2.new(0, 275, 0, 40)
-CMDBar.Font = Enum.Font.Gotham
-CMDBar.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-CMDBar.PlaceholderText = "CMD BAR..."
-CMDBar.Text = ""
-CMDBar.TextColor3 = Color3.fromRGB(20, 20, 20)
-CMDBar.TextSize = 14.000
-CMDBar.TextWrapped = true
 
-CannonTP1_Button.Name = "CannonTP1_Button"
-CannonTP1_Button.Parent = Game_Section
-CannonTP1_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-CannonTP1_Button.BackgroundTransparency = 0.500
-CannonTP1_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CannonTP1_Button.BorderSizePixel = 0
-CannonTP1_Button.Position = UDim2.new(0, 25, 0, 400)
-CannonTP1_Button.Size = UDim2.new(0, 150, 0, 30)
-CannonTP1_Button.Font = Enum.Font.Oswald
-CannonTP1_Button.Text = "TP Cannon 1"
-CannonTP1_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-CannonTP1_Button.TextScaled = true
-CannonTP1_Button.TextSize = 14.000
-CannonTP1_Button.TextWrapped = true
 
-CannonTP2_Button.Name = "CannonTP2_Button"
-CannonTP2_Button.Parent = Game_Section
-CannonTP2_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-CannonTP2_Button.BackgroundTransparency = 0.500
-CannonTP2_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CannonTP2_Button.BorderSizePixel = 0
-CannonTP2_Button.Position = UDim2.new(0, 210, 0, 400)
-CannonTP2_Button.Size = UDim2.new(0, 150, 0, 30)
-CannonTP2_Button.Font = Enum.Font.Oswald
-CannonTP2_Button.Text = "TP Cannon 2"
-CannonTP2_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-CannonTP2_Button.TextScaled = true
-CannonTP2_Button.TextSize = 14.000
-CannonTP2_Button.TextWrapped = true
 
-CannonTP3_Button.Name = "CannonTP3_Button"
-CannonTP3_Button.Parent = Game_Section
-CannonTP3_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-CannonTP3_Button.BackgroundTransparency = 0.500
-CannonTP3_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CannonTP3_Button.BorderSizePixel = 0
-CannonTP3_Button.Position = UDim2.new(0, 25, 0, 450)
-CannonTP3_Button.Size = UDim2.new(0, 150, 0, 30)
-CannonTP3_Button.Font = Enum.Font.Oswald
-CannonTP3_Button.Text = "TP Cannon 3"
-CannonTP3_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-CannonTP3_Button.TextScaled = true
-CannonTP3_Button.TextSize = 14.000
-CannonTP3_Button.TextWrapped = true
+
+
+
+
 
 MinefieldTP_Button.Name = "MinefieldTP_Button"
 MinefieldTP_Button.Parent = Game_Section
@@ -2015,7 +1840,7 @@ OpenClose.ImageColor3 = Color3.fromRGB(228, 8, 10)
 UICornerOC.CornerRadius = UDim.new(1, 0)
 UICornerOC.Parent = OpenClose
 
-CreateToggle(AntiRagdoll_Button)
+CreateToggle(VC_Unban_Button)
 CreateToggle(PushAura_Button)
 CreateToggle(SpamMines_Button)
 CreateToggle(PotionFling_Button)
@@ -2200,21 +2025,9 @@ Credits_Section_Button.MouseButton1Click:Connect(function()
 end)
 
 --GAME SECTION BUTTONS
-AntiRagdollFunction = nil
-AntiRagdoll_Button.MouseButton1Click:Connect(function()
-	ChangeToggleColor(AntiRagdoll_Button)
-	ToggleRagdoll(true)
-	if AntiRagdoll_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
-		AntiRagdollFunction = GetRoot(plr).ChildAdded:Connect(function(Force)
-			if Force.Name == "PushForce" then
-				Force.MaxForce = Vector3.new(0,0,0)
-				Force.Velocity = Vector3.new(0,0,0)
-			end
-		end)
-	else
-		ToggleRagdoll(false)
-		AntiRagdollFunction:Disconnect()
-	end
+VC_Unban_Button.MouseButton1Click:Connect(function()
+	game:GetService("VoiceChatService"):joinVoice()
+
 end)
 
 PushAura_Button.MouseButton1Click:Connect(function()
@@ -3456,9 +3269,7 @@ plr.CharacterAdded:Connect(function(x)
 		ChangeToggleColor(PotionFling_Button)
 		SendNotify("System Broken","PotionFling was automatically disabled due to your character respawn",5)
 	end
-	if AntiRagdoll_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
-		ChangeToggleColor(AntiRagdoll_Button)
-		SendNotify("System Broken","AntiRagdoll was automatically disabled due to your character respawn",5)
+
 	end
 	if SpamMines_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(SpamMines_Button)
