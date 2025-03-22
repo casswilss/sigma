@@ -50,8 +50,8 @@ for X = -10000, 10000, 512 do
         P.CFrame = CFrame.new(X, -0.5, Z)  -- Lowered slightly to align with the original
 
         -- Set the color and material to match the original baseplate's darker grey
-        P.Color = Color3.fromRGB(55, 137, 60)  -- Darker grey for the asphalt
-        P.Material = Enum.Material.Grass  -- Asphalt material for road-like surface
+        P.Color = Color3.fromRGB(106, 134, 64)  -- Darker grey for the asphalt
+        P.Material = Enum.Material.LeafyGrass  -- Asphalt material for road-like surface
         P.Transparency = 1  -- Set them invisible initially
         P.CanCollide = false  -- Disable collisions initially
 
