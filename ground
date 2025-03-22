@@ -64,11 +64,11 @@ end
 local function toggleBaseplate()
     -- Toggle baseplates' visibility and collisions
     for _, part in pairs(baseplates) do
-        if part.Transparency == 30 then
+        if part.Transparency == 0.5 then
             part.Transparency = 1  -- Make the part invisible
             part.CanCollide = false  -- Disable collisions
         else
-            part.Transparency = 30  -- Make the part visible
+            part.Transparency = 0.5  -- Make the part visible
             part.CanCollide = true  -- Enable collisions
         end
     end
