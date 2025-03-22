@@ -345,7 +345,6 @@ local ZombieFEAnim_Button = Instance.new("TextButton")
 --NEWS
 local Misc_Section = Instance.new("ScrollingFrame")
 local AntiFling_Button = Instance.new("TextButton")
-local AntiChatSpy_Button = Instance.new("TextButton")
 local AntiAFK_Button = Instance.new("TextButton")
 local Shaders_Button = Instance.new("TextButton")
 local Day_Button = Instance.new("TextButton")
@@ -1720,21 +1719,6 @@ AntiAFK_Button.TextScaled = true
 AntiAFK_Button.TextSize = 14.000
 AntiAFK_Button.TextWrapped = true
 
-AntiChatSpy_Button.Name = "AntiChatSpy_Button"
-AntiChatSpy_Button.Parent = Misc_Section
-AntiChatSpy_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-AntiChatSpy_Button.BackgroundTransparency = 0.500
-AntiChatSpy_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AntiChatSpy_Button.BorderSizePixel = 0
-AntiChatSpy_Button.Position = UDim2.new(0, 210, 0, 25)
-AntiChatSpy_Button.Size = UDim2.new(0, 150, 0, 30)
-AntiChatSpy_Button.Font = Enum.Font.Oswald
-AntiChatSpy_Button.Text = "Anti chat spy"
-AntiChatSpy_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-AntiChatSpy_Button.TextScaled = true
-AntiChatSpy_Button.TextSize = 14.000
-AntiChatSpy_Button.TextWrapped = true
-
 Shaders_Button.Name = "Shaders_Button"
 Shaders_Button.Parent = Misc_Section
 Shaders_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
@@ -1846,10 +1830,10 @@ FreeEmotes_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
 FreeEmotes_Button.BackgroundTransparency = 0.500
 FreeEmotes_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
 FreeEmotes_Button.BorderSizePixel = 0
-FreeEmotes_Button.Position = UDim2.new(0, 210, 0, 225)
+FreeEmotes_Button.Position = UDim2.new(0, 210, 0, 25)
 FreeEmotes_Button.Size = UDim2.new(0, 150, 0, 30)
 FreeEmotes_Button.Font = Enum.Font.Oswald
-FreeEmotes_Button.Text = "Free emotes"
+FreeEmotes_Button.Text = "Emotes"
 FreeEmotes_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 FreeEmotes_Button.TextScaled = true
 FreeEmotes_Button.TextSize = 14.000
@@ -2112,7 +2096,6 @@ CreateClicker(PatrolAnim_Button)
 CreateClicker(ZombieFEAnim_Button)
 
 CreateToggle(AntiFling_Button)
-CreateToggle(AntiChatSpy_Button)
 CreateToggle(AntiAFK_Button)
 CreateToggle(Shaders_Button)
 CreateClicker(Day_Button)
@@ -3317,15 +3300,6 @@ AntiFling_Button.MouseButton1Click:Connect(function()
 	end
 end)
 
-AntiChatSpy_Button.MouseButton1Click:Connect(function()
-	ChangeToggleColor(AntiChatSpy_Button)
-	if AntiChatSpy_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
-		repeat task.wait()
-			Players:Chat(RandomChar())
-		until AntiChatSpy_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(255,0,0)
-	end
-end)
-
 local AntiAFKFunction = nil
 AntiAFK_Button.MouseButton1Click:Connect(function()
 	ChangeToggleColor(AntiAFK_Button)
@@ -3427,11 +3401,7 @@ Explode_Button.MouseButton1Click:Connect(function()
 end)
 
 FreeEmotes_Button.MouseButton1Click:Connect(function()
-	if not FreeEmotesEnabled then
-		FreeEmotesEnabled = true
-		SendNotify("System Broken","Loading free emotes.\nCredits: Gi#7331")
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/AllEmotes"))()
-	end
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
 end)
 
 Rejoin_Button.MouseButton1Click:Connect(function()
