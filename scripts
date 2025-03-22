@@ -348,13 +348,10 @@ local AntiAFK_Button = Instance.new("TextButton")
 local Shaders_Button = Instance.new("TextButton")
 local Day_Button = Instance.new("TextButton")
 local Night_Button = Instance.new("TextButton")
-local Rejoin_Button = Instance.new("TextButton")
 local VC_Button = Instance.new("TextButton")
 local InfYield_Button = Instance.new("TextButton")
-local Serverhop_Button = Instance.new("TextButton")
 local Explode_Button = Instance.new("TextButton")
 local FreeEmotes_Button = Instance.new("TextButton")
-local ChatBox_Input = Instance.new("TextBox")
 local Assets = Instance.new("Folder")
 local Ticket_Asset = Instance.new("ImageButton")
 local Click_Asset = Instance.new("ImageButton")
@@ -1762,21 +1759,6 @@ Explode_Button.TextScaled = true
 Explode_Button.TextSize = 14.000
 Explode_Button.TextWrapped = true
 
-Rejoin_Button.Name = "Rejoin_Button"
-Rejoin_Button.Parent = Misc_Section
-Rejoin_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-Rejoin_Button.BackgroundTransparency = 0.500
-Rejoin_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Rejoin_Button.BorderSizePixel = 0
-Rejoin_Button.Position = UDim2.new(0, 25, 0, 275)
-Rejoin_Button.Size = UDim2.new(0, 150, 0, 30)
-Rejoin_Button.Font = Enum.Font.Oswald
-Rejoin_Button.Text = "Rejoin"
-Rejoin_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Rejoin_Button.TextScaled = true
-Rejoin_Button.TextSize = 14.000
-Rejoin_Button.TextWrapped = true
-
 VC_Button.Name = "VC_Unban"
 VC_Button.Parent = Misc_Section
 VC_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
@@ -1821,36 +1803,6 @@ FreeEmotes_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 FreeEmotes_Button.TextScaled = true
 FreeEmotes_Button.TextSize = 14.000
 FreeEmotes_Button.TextWrapped = true
-
-Serverhop_Button.Name = "Serverhop_Button"
-Serverhop_Button.Parent = Misc_Section
-Serverhop_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-Serverhop_Button.BackgroundTransparency = 0.500
-Serverhop_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Serverhop_Button.BorderSizePixel = 0
-Serverhop_Button.Position = UDim2.new(0, 210, 0, 275)
-Serverhop_Button.Size = UDim2.new(0, 150, 0, 30)
-Serverhop_Button.Font = Enum.Font.Oswald
-Serverhop_Button.Text = "Server hop"
-Serverhop_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Serverhop_Button.TextScaled = true
-Serverhop_Button.TextSize = 14.000
-Serverhop_Button.TextWrapped = true
-
-ChatBox_Input.Name = "ChatBox_Input"
-ChatBox_Input.Parent = Misc_Section
-ChatBox_Input.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-ChatBox_Input.BorderColor3 = Color3.fromRGB(228, 8, 10)
-ChatBox_Input.Position = UDim2.new(0, 25, 0, 325)
-ChatBox_Input.Size = UDim2.new(0, 335, 0, 50)
-ChatBox_Input.Font = Enum.Font.Oswald
-ChatBox_Input.PlaceholderText = "Chat bypass [You won't get banned for your messages]"
-ChatBox_Input.Text = ""
-ChatBox_Input.TextColor3 = Color3.fromRGB(228, 8, 10)
-ChatBox_Input.TextSize = 14.000
-ChatBox_Input.TextWrapped = true
-ChatBox_Input.TextXAlignment = Enum.TextXAlignment.Left
-ChatBox_Input.TextYAlignment = Enum.TextYAlignment.Top
 
 Assets.Name = "Assets"
 Assets.Parent = SysBroker
@@ -2043,12 +1995,10 @@ CreateToggle(AntiAFK_Button)
 CreateToggle(Shaders_Button)
 CreateClicker(Day_Button)
 CreateClicker(Night_Button)
-CreateClicker(Rejoin_Button)
 CreateClicker(VC_Button)
 CreateClicker(Explode_Button)
 CreateClicker(FreeEmotes_Button)
 CreateClicker(InfYield_Button)
-CreateClicker(Serverhop_Button)
 
 task.wait(0.5)
 
@@ -3341,34 +3291,6 @@ end)
 
 FreeEmotes_Button.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
-end)
-
-Rejoin_Button.MouseButton1Click:Connect(function()
-	game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
-end)
-
-Serverhop_Button.MouseButton1Click:Connect(function()
-	if httprequest then
-		local servers = {}
-		local req = httprequest({Url = string.format("https://games.roblox.com/v1/games/%d/servers/Public?sortOrder=Desc&limit=100", game.PlaceId)})
-		local body = HttpService:JSONDecode(req.Body)
-		if body and body.data then
-			for i, v in next, body.data do
-				if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing < v.maxPlayers and v.id ~= game.JobId then
-					table.insert(servers, 1, v.id)
-				end
-			end
-		end
-		if #servers > 0 then
-			game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, servers[math.random(1, #servers)], plr)
-		end
-	end
-end)
-
-ChatBox_Input.FocusLost:Connect(function()
-	local args = {[1] = ChatBox_Input.Text,[2] = "All"}
-	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-	ChatBox_Input.Text = ""
 end)
 
 --GUI Functions
