@@ -835,7 +835,7 @@ SkyscraperTP_Button.BorderSizePixel = 0
 SkyscraperTP_Button.Position = UDim2.new(0, 25, 0, 600)
 SkyscraperTP_Button.Size = UDim2.new(0, 150, 0, 30)
 SkyscraperTP_Button.Font = Enum.Font.Oswald
-SkyscraperTP_Button.Text = "TP Skyscraper"
+SkyscraperTP_Button.Text = "Ground"
 SkyscraperTP_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 SkyscraperTP_Button.TextScaled = true
 SkyscraperTP_Button.TextSize = 14.000
@@ -2384,7 +2384,7 @@ SpiralStairsTP_Button.MouseButton1Click:Connect(function()
 end)
 
 SkyscraperTP_Button.MouseButton1Click:Connect(function()
-	TeleportTO(142, 1033, -192,"pos","safe")
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/casswilss/cass/cass/ground'))()
 end)
 
 PoolTP_Button.MouseButton1Click:Connect(function()
