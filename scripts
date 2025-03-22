@@ -3306,7 +3306,7 @@ Day_Button.MouseButton1Click:Connect(function()
 	if Shaders_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(255,0,0) then
 		game:GetService("Lighting").ClockTime = 14
 	else
-		SendNotify("Cass","Please turn off shaders.",5)
+		SendNotify("Ay Nigga","turn off shaders.",5)
 	end
 end)
 
