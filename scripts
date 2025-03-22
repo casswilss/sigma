@@ -344,7 +344,6 @@ local PatrolAnim_Button = Instance.new("TextButton")
 local ZombieFEAnim_Button = Instance.new("TextButton")
 --NEWS
 local Misc_Section = Instance.new("ScrollingFrame")
-local AntiFling_Button = Instance.new("TextButton")
 local AntiChatSpy_Button = Instance.new("TextButton")
 local AntiAFK_Button = Instance.new("TextButton")
 local Shaders_Button = Instance.new("TextButton")
@@ -1690,21 +1689,6 @@ Misc_Section.Visible = false
 Misc_Section.CanvasSize = UDim2.new(0, 0, 1.1, 0)
 Misc_Section.ScrollBarThickness = 5
 
-AntiFling_Button.Name = "AntiFling_Button"
-AntiFling_Button.Parent = Misc_Section
-AntiFling_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
-AntiFling_Button.BackgroundTransparency = 0.500
-AntiFling_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AntiFling_Button.BorderSizePixel = 0
-AntiFling_Button.Position = UDim2.new(0, 25, 0, 25)
-AntiFling_Button.Size = UDim2.new(0, 150, 0, 30)
-AntiFling_Button.Font = Enum.Font.Oswald
-AntiFling_Button.Text = "Anti fling"
-AntiFling_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-AntiFling_Button.TextScaled = true
-AntiFling_Button.TextSize = 14.000
-AntiFling_Button.TextWrapped = true
-
 AntiAFK_Button.Name = "AntiAFK_Button"
 AntiAFK_Button.Parent = Misc_Section
 AntiAFK_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
@@ -1816,7 +1800,7 @@ VC_Button.BackgroundColor3 = Color3.fromRGB(228, 8, 10)
 VC_Button.BackgroundTransparency = 0.500
 VC_Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
 VC_Button.BorderSizePixel = 0
-VC_Button.Position = UDim2.new(0, 210, 0, 175)
+VC_Button.Position = UDim2.new(0, 25, 0, 25)
 VC_Button.Size = UDim2.new(0, 150, 0, 30)
 VC_Button.Font = Enum.Font.Oswald
 VC_Button.Text = "VC Unban"
@@ -2111,7 +2095,6 @@ CreateClicker(CowboyAnim_Button)
 CreateClicker(PatrolAnim_Button)
 CreateClicker(ZombieFEAnim_Button)
 
-CreateToggle(AntiFling_Button)
 CreateToggle(AntiChatSpy_Button)
 CreateToggle(AntiAFK_Button)
 CreateToggle(Shaders_Button)
