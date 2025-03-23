@@ -78,8 +78,8 @@ local function toggleBaseplate()
         toggleButton.BackgroundColor3 = Color3.new(0, 1, 0)  -- Green background for "On"
         toggleButton.Text = "Execute"  -- Change text to "On"
     else
-        toggleButton.BackgroundColor3 = Color3.new(1, 0, 0)  -- Red background for "Off"
-        toggleButton.Text = "Off"  -- Change text to "Off"
+        toggleButton.BackgroundColor3 = Color3.new(0, 1, 0)  -- Red background for "Off"
+        toggleButton.Text = "Execute"  -- Change text to "Off"
     end
 end
 
