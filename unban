@@ -15,16 +15,6 @@ local UICorner = Instance.new("UICorner")
 UICorner.CornerRadius = UDim.new(0, 12)  -- Rounded corners
 UICorner.Parent = mainFrame
 
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 0.3, 0)  -- Occupies the top 30% of the frame
-textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Placed at the top of the frame
-textLabel.BackgroundTransparency = 1  -- Transparent background
-textLabel.Text = "Mic-Up Ground Toggle"
-textLabel.TextColor3 = Color3.new(1, 1, 1)  -- White text
-textLabel.TextScaled = true  -- Scales the text to fit
-textLabel.Font = Enum.Font.GothamBold
-textLabel.Parent = mainFrame
-
 local toggleButton = Instance.new("TextButton")
 toggleButton.Size = UDim2.new(1, 0, 0.7, 0)  -- Occupies the bottom 70% of the frame
 toggleButton.Position = UDim2.new(0, 0, 0.3, 0)  -- Placed below the text label
