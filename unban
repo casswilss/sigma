@@ -84,7 +84,7 @@ local function toggleBaseplate()
 end
 
 toggleButton.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    game:GetService("VoiceChatService"):joinVoice()
 end)
 
 -- Handle dragging logic for smoother dragging of the whole frame
